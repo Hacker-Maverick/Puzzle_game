@@ -1,0 +1,200 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-size: cover;
+    background-color: rgb(254, 119, 119);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-image: linear-gradient(rgb(255, 0, 166),rgb(241, 133, 199),rgb(255, 0, 166));
+}
+
+#title{
+    margin:2px;
+    padding: 2px;
+    background-image: linear-gradient(rgb(255, 0, 166),rgb(241, 133, 199),rgb(255, 0, 166));
+}
+
+#navbut{
+    display: flex;
+    background-image: linear-gradient(rgb(255, 0, 166),rgb(241, 133, 199),rgb(255, 0, 166));
+}
+
+.navbuttons{
+    margin: 2px;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    background-color: rgb(179, 113, 241);
+}
+
+.navbuttons:hover{
+    border: 1.4px solid rgb(0, 0, 0);
+    margin: 1.2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+#Content{
+    text-align: center;
+    width: 80%;
+    margin: 10%;
+    font-family: monospace;
+    font-size:x-large;
+    font-weight: 900;
+}
+
+#boxes{
+    display: grid;
+    grid-template-columns:auto auto auto auto;
+    border: 0.4vw solid black;
+    width: 60vw;
+    margin-left: 19.6vw;
+}
+
+.image{
+    height: 15vw;
+    width: 15vw;
+    margin-top: 0px;
+}
+
+.image:hover{
+    border-radius: 10px;
+
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+img:hover{
+    border-radius: 10px;
+    cursor: pointer;
+    height: 110%;
+    width: 110%;
+    position: relative;
+    right: 5%;
+    bottom: 5%;
+}
+
+#startgame{
+    text-align: center;
+    padding: 40px;
+
+}
+
+#start{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: rgb(248, 251, 253);
+}
+
+#start:hover{
+    background-color: rgb(46, 255, 46);
+    color: #000;
+}
+
+
+@keyframes up {
+    from {bottom:0px;}
+    to{bottom: 15vw;}
+}
+@keyframes down {
+    from {top:0px;}
+    to{top: 15vw;}
+}
+@keyframes leftt {
+    from {right:0px;}
+    to{right: 15vw;}
+}
+@keyframes rightt {
+    from {left:0px;}
+    to{left: 15vw;}
+}
+
+
+@media all and (max-width:400px){
+    #boxes{
+        width:80vw;
+        margin-left: 9.6vw;
+    }
+    .image{
+        height: 20vw;
+        width: 20vw;
+    }
+    @keyframes up {
+        from {bottom:0px;}
+        to{bottom: 20vw;}
+    }
+    @keyframes down {
+        from {top:0px;}
+        to{top: 20vw;}
+    }
+    @keyframes leftt {
+        from {right:0px;}
+        to{right: 20vw;}
+    }
+    @keyframes rightt {
+        from {left:0px;}
+        to{left: 20vw;}
+    }
+}
+
+@media all and (min-width:800px){
+    #boxes{
+        width:32vw;
+        margin-left: 34vw;
+    }
+    .image{
+        height: 8vw;
+        width: 8vw;
+    }
+    #Content{
+        margin:3% 10%;
+    }
+    @keyframes up {
+        from {bottom:0px;}
+        to{bottom: 8vw;}
+    }
+    @keyframes down {
+        from {top:0px;}
+        to{top: 8vw;}
+    }
+    @keyframes leftt {
+        from {right:0px;}
+        to{right: 8vw;}
+    }
+    @keyframes rightt {
+        from {left:0px;}
+        to{left: 8vw;}
+    }
+}
+
+.moveup{
+    animation-name:up;
+    animation-duration: 250ms;
+    position :relative;
+}
+.movedown{
+    animation-name:down;
+    animation-duration: 250ms;
+    position :relative;
+}
+.moveleftt{
+    animation-name:leftt;
+    animation-duration: 250ms;
+    position :relative;
+}
+.moverightt{
+    animation-name:rightt;
+    animation-duration: 250ms;
+    position :relative;
+}
